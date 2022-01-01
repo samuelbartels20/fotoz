@@ -5,7 +5,6 @@ package main
 Tells the compiler which packages i intend to use in my code
 */
 import (
-	"fmt"
 	"net/http"
 )
 
@@ -13,7 +12,7 @@ import (
 This is the function i use to process incoming web requests
 */
 func handlerFunc(w http.ResponseWriter, r *http.Request){
-	fmt.Fprintf(w, "<h1>This is the begining of my journey in Go programming</h1>")
+	w.Write([]byte("<h1>Welcome to my awesome site!</h1>"))
 }
 
 func main() {
