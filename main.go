@@ -5,11 +5,11 @@ import (
 )
 
 func handlerFunc(w http.ResponseWriter, r *http.Request){
-	fmt.Fprintf(w, "<h1>Welcome to my awesome site!</h1>")
+	fmt.Fprintf(w, "<h1>This is the begining of my journey in Go programming</h1>")
 }
 
 func main() {
 	http.HandleFunc("/", handlerFunc)
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":3001", nil)
 }
 
