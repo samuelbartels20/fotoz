@@ -15,6 +15,7 @@ func handlerFunc(w http.ResponseWriter, r *http.Request){
 	w.Write([]byte("<h1>Welcome to my awesome site!</h1>"))
 }
 
+// This is the function that will be run to start up your application
 func main() {
 	http.HandleFunc("/", handlerFunc)
 	http.ListenAndServe(":3001", nil)
